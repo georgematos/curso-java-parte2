@@ -1,0 +1,17 @@
+Produto Cartesiano (relaciona todos os campos de uma tabela com todos os campos de outra tabela)
+
+	SELECT * FROM PRODUCT, CATEGORY
+
+Junção (produto cartesiano + restrição de chaves correspondentes)
+
+	SELECT * FROM PRODUCT, CATEGORY WHERE PRODUCT.CATEGORY_ID = CATEGORY.ID
+		ou
+	SELECT * FROM PRODUCT P INNER JOIN CATEGORY C ON P.CATEGORY_ID = C.ID
+
+Restrição (restring os registros retornados de acordo com um campo de uma tabela)
+
+	SELECT * FROM PRODUCT P INNER JOIN CATEGORY C ON P.CATEGORY_ID = C.ID WHERE C.NAME = "Computers"
+
+Projeção (seleciona os campos que serão retornados na clausula SELECT)
+
+	SELECT * FROM PRODUCT.*, CATEGORY.NAME FROM PRODUCT P INNER JOIN CATEGORY C ON P.CATEGORY_ID = C.ID WHERE C.NAME = 'Computers'
