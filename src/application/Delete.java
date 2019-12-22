@@ -18,8 +18,7 @@ public class Delete {
 			
 			conn = DB.getConnection();
 			
-			pStatment = conn.prepareStatement("DELETE FROM department " +
-					"WHERE id = ?");
+			pStatment = conn.prepareStatement("DELETE FROM department WHERE id = ?");
 			
 			pStatment.setInt(1, 2);
 			

@@ -17,9 +17,7 @@ public class Update {
 			
 			conn = DB.getConnection();
 			
-			pStatment = conn.prepareStatement("UPDATE seller " +
-					"SET BaseSalary = BaseSalary + ? " +
-					"WHERE departmentId = ?;");
+			pStatment = conn.prepareStatement("UPDATE seller SET BaseSalary = BaseSalary + ? WHERE departmentId = ?;");
 			
 			pStatment.setDouble(1, 200);
 			pStatment.setInt(2, 2);
